@@ -3,11 +3,20 @@
     <head>
         <meta charset="utf-8"/>
         <title>我的测试页</title>
+        <link rel="stylesheet" href="layout.css" media="screen"/>
     </head>
     <body>
         <h3>首页</h3>
         <p id="a" title="我是title">我是p id是a</p>
         <p class="b">我是p class是b</p>
+        <ul>
+            <!--onclick():当点击时触发一个动作,return false表示不触发默认行为-->
+            <li><a href="images/linux.jpg" onclick="showPic(this);return false"title="我是linxu">Linxu</a></li>
+            <li><a href="images/python.jpg" onclick="return false" title="我是python">Python</a></li>
+            <li><a href="images/javascript.png" title="我是JavaScript">JavaScript</a> </li>
+        </ul>
+        <img id="placeholder" src="images/language.jpg" alt="my image gallery"/>
+       <p id="description">选择一个图片.</p>
         <script src="test.js"></script>
     </body>
 </html>

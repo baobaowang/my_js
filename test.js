@@ -12,9 +12,26 @@ for (var i=0;i<paras.length;i++)
     console.log(paras[i].getAttribute('title'))
 }
 
+//替换图片
+//先获取替换源标签,再获取被替换的id,最后用属性替换
+function showPic(whichpic)
+{
+    var source = whichpic.getAttribute('href')
+    var placeholder = document.getElementById('placeholder')
+    placeholder.setAttribute('src',source)
+    //placeholder.src=source  非DOM解决方案
+    var text = whichpic.getAttribute('title')
+    var description = document.getElementById('description')
+    description.firstChild.nodeValue = text
+}
 
-
-
+function countBodyChildren()
+{
+    var body_element = document.getElementsByTagName("body")[0];
+}
+window.onload = countBodyChildren
+//不带括号的函数,理解为c里的指针,需要时再调用,执行
+//带括号的函数直接执行,计算
 
 
 
